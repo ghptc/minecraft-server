@@ -17,6 +17,7 @@ services:
       ENABLE_RCON: "FALSE"
       VIEW_DISTANCE: "20"
       SIMULATION_DISTANCE: "8"
+      CREATE_CONSOLE_IN_PIPE: "true"
     volumes:
       - ./data:/data
     stop_grace_period: 2m
