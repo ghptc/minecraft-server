@@ -15,9 +15,9 @@ services:
       ENABLE_WHITELIST: "FALSE"
       ENFORCE_WHITELIST: "FALSE"
       ENABLE_RCON: "FALSE"
-      VIEW_DISTANCE: "20"
+      VIEW_DISTANCE: "24"
       SIMULATION_DISTANCE: "8"
-      CREATE_CONSOLE_IN_PIPE: "true"
+      CREATE_CONSOLE_IN_PIPE: "TRUE"
     volumes:
       - ./data:/data
     stop_grace_period: 2m
