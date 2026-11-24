@@ -22,4 +22,17 @@ services:
       - ./data:/data
     stop_grace_period: 2m
     mem_limit: 12g
+  watcher:
+    image: ghcr.io/ghptc/minecraft-watcher:1.0.0
+    restart: unless-stopped
+    environment:
+      DISCORD_WEBHOOK_URL: ${DISCORD_WEBHOOK_URL:?required}
+    volumes:
+      - ./data/logs:/logs:ro
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 64m
 
