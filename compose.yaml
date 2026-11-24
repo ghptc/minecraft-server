@@ -23,7 +23,7 @@ services:
     stop_grace_period: 2m
     mem_limit: 12g
   watcher:
-    image: ghcr.io/ghptc/minecraft-watcher:1.0.0
+    image: ghcr.io/ghptc/minecraft-watcher:1.0.1
     restart: unless-stopped
     environment:
       DISCORD_WEBHOOK_URL: ${DISCORD_WEBHOOK_URL:?required}
